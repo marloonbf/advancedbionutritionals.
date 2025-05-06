@@ -5,17 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Advanced Memory Formula - Official Site</title>
 
-  <!-- Google Analytics 4 -->
+  <!-- Google Analytics GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLX0N1RRZB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-
     gtag('js', new Date());
+    gtag('config', 'G-KLX0N1RRZB');
+  </script>
 
-    // Configurações do GA4 e Google Ads
-    gtag('config', 'G-KLX0N1RRZB'); // GA4
-    gtag('config', 'AW-17048694370'); // Google Ads
+  <!-- Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17048694370"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-17048694370');
+
+    function gtag_report_conversion(url) {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17048694370/7XQJCKihg8EaEOLcucE_',
+        'transaction_id': '',
+        'event_callback': function () {
+          if (url) {
+            window.location.href = url;
+          }
+        }
+      });
+      return false;
+    }
   </script>
 
   <style>
@@ -65,11 +83,6 @@
       font-size: 16px;
       color: #444;
       line-height: 1.5;
-    }
-
-    .cookie-modal a {
-      color: #0056d6;
-      text-decoration: underline;
     }
 
     .cookie-modal .actions {
@@ -136,24 +149,7 @@
 
   <script>
     function redirectToOffer() {
-      // Evento personalizado GA4
-      gtag('event', 'click_accept_button', {
-        event_category: 'engagement',
-        event_label: 'Click Accept Button'
-      });
-
-      // Conversão Google Ads
-      var callback = function () {
-        window.location = "https://www.advancedbionutritionals.com/DS24/Advanced-Memory/Secret-Of-A-Brain/SL-V1.htm#aff=marloonbfss";
-      };
-
-      gtag('event', 'conversion', {
-        'send_to': 'AW-17048694370/7XQJCKihg8EaEOLcucE_',
-        'transaction_id': '',
-        'event_callback': callback
-      });
-
-      return false;
+      gtag_report_conversion("https://www.advancedbionutritionals.com/DS24/Advanced-Memory/Secret-Of-A-Brain/SL-V1.htm#aff=marloonbfss");
     }
   </script>
 
