@@ -5,29 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Advanced Memory Formula - Official Site</title>
 
-  <!-- Google Tag (GA4 + Google Ads) -->
+  <!-- Google Analytics GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLX0N1RRZB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
-    // Google Analytics (GA4)
     gtag('config', 'G-KLX0N1RRZB');
-
-    // Google Ads
-    gtag('config', 'AW-17048694370');
-
-    function gtag_report_conversion(url) {
-      gtag('event', 'conversion', {
-        'send_to': 'AW-17048694370/7XQJCKihg8EaEOLcucE_',
-        'transaction_id': '',
-        'event_callback': function () {
-          if (url) window.location.href = url;
-        }
-      });
-      return false;
-    }
+    gtag('config', 'AW-17048694370'); // Google Ads
   </script>
 
   <style>
@@ -84,7 +69,7 @@
       margin-top: 24px;
     }
 
-    .cookie-modal button {
+    .cookie-modal a button {
       background: linear-gradient(to right, #007bff, #0056d6);
       color: white;
       border: none;
@@ -95,7 +80,7 @@
       transition: background 0.3s ease;
     }
 
-    .cookie-modal button:hover {
+    .cookie-modal a button:hover {
       background: linear-gradient(to right, #0056d6, #007bff);
     }
 
@@ -133,19 +118,15 @@
 <body>
 
   <div class="cookie-modal" id="cookieBox">
-    <button class="close-btn" onclick="redirectToOffer()">×</button>
+    <button class="close-btn" onclick="window.location.href='https://www.advancedbionutritionals.com/DS24/Advanced-Memory/Secret-Of-A-Brain/SL-V1.htm#aff=marloonbfss'">×</button>
     <h2>Before You Continue</h2>
     <p>This site uses cookies to personalize content and offers, provide social media features, and improve your experience. By clicking "Accept", you agree to our use of cookies. <br><br>Click below to claim your exclusive discount now!</p>
     <div class="actions">
-      <button onclick="redirectToOffer()">Accept</button>
+      <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Memory/Secret-Of-A-Brain/SL-V1.htm#aff=marloonbfss">
+        <button>Accept</button>
+      </a>
     </div>
   </div>
-
-  <script>
-    function redirectToOffer() {
-      gtag_report_conversion("https://www.advancedbionutritionals.com/DS24/Advanced-Memory/Secret-Of-A-Brain/SL-V1.htm#aff=marloonbfss");
-    }
-  </script>
 
 </body>
 </html>
