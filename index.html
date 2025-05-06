@@ -5,33 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Advanced Memory Formula - Official Site</title>
 
-  <!-- Google Analytics GA4 -->
+  <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLX0N1RRZB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
+
     gtag('js', new Date());
-    gtag('config', 'G-KLX0N1RRZB');
-  </script>
 
-  <!-- Google Ads Tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17048694370"></script>
-  <script>
-    gtag('config', 'AW-17048694370');
-
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-        'send_to': 'AW-17048694370/7XQJCKihg8EaEOLcucE_',
-        'transaction_id': '',
-        'event_callback': callback
-      });
-      return false;
-    }
+    // Configurações do GA4 e Google Ads
+    gtag('config', 'G-KLX0N1RRZB'); // GA4
+    gtag('config', 'AW-17048694370'); // Google Ads
   </script>
 
   <style>
@@ -152,7 +136,24 @@
 
   <script>
     function redirectToOffer() {
-      gtag_report_conversion("https://www.advancedbionutritionals.com/DS24/Advanced-Memory/Secret-Of-A-Brain/SL-V1.htm#aff=marloonbfss");
+      // Evento personalizado GA4
+      gtag('event', 'click_accept_button', {
+        event_category: 'engagement',
+        event_label: 'Click Accept Button'
+      });
+
+      // Conversão Google Ads
+      var callback = function () {
+        window.location = "https://www.advancedbionutritionals.com/DS24/Advanced-Memory/Secret-Of-A-Brain/SL-V1.htm#aff=marloonbfss";
+      };
+
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17048694370/7XQJCKihg8EaEOLcucE_',
+        'transaction_id': '',
+        'event_callback': callback
+      });
+
+      return false;
     }
   </script>
 
