@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Advanced Memory Formula - Official Site</title>
 
-  <!-- Google Analytics GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLX0N1RRZB"></script>
+  <!-- Google Tag Manager -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-KLX0N1RRZB');
-    gtag('config', 'AW-17048694370'); // Google Ads
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T6K9ZRTZ');
   </script>
+  <!-- End Google Tag Manager -->
 
   <style>
     body {
@@ -69,7 +69,7 @@
       margin-top: 24px;
     }
 
-    .cookie-modal a button {
+    .cookie-modal button {
       background: linear-gradient(to right, #007bff, #0056d6);
       color: white;
       border: none;
@@ -80,7 +80,7 @@
       transition: background 0.3s ease;
     }
 
-    .cookie-modal a button:hover {
+    .cookie-modal button:hover {
       background: linear-gradient(to right, #0056d6, #007bff);
     }
 
@@ -117,16 +117,25 @@
 </head>
 <body>
 
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6K9ZRTZ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <div class="cookie-modal" id="cookieBox">
-    <button class="close-btn" onclick="window.location.href='https://www.advancedbionutritionals.com/DS24/Advanced-Memory/Secret-Of-A-Brain/SL-V1.htm#aff=marloonbfss'">×</button>
+    <button class="close-btn" onclick="redirectToOffer()">×</button>
     <h2>Before You Continue</h2>
     <p>This site uses cookies to personalize content and offers, provide social media features, and improve your experience. By clicking "Accept", you agree to our use of cookies. <br><br>Click below to claim your exclusive discount now!</p>
     <div class="actions">
-      <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Memory/Secret-Of-A-Brain/SL-V1.htm#aff=marloonbfss">
-        <button>Accept</button>
-      </a>
+      <button onclick="redirectToOffer()">Accept</button>
     </div>
   </div>
+
+  <script>
+    function redirectToOffer() {
+      window.location.href = "https://www.advancedbionutritionals.com/DS24/Advanced-Memory/Secret-Of-A-Brain/SL-V1.htm#aff=marloonbfss";
+    }
+  </script>
 
 </body>
 </html>
