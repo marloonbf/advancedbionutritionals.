@@ -5,21 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Advanced Memory Formula - Official Site</title>
 
-  <!-- Google Analytics GA4 -->
+  <!-- Google Tag (GA4 + Google Ads) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLX0N1RRZB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-KLX0N1RRZB');
-  </script>
 
-  <!-- Google Ads -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17048694370"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    // Google Analytics (GA4)
+    gtag('config', 'G-KLX0N1RRZB');
+
+    // Google Ads
     gtag('config', 'AW-17048694370');
 
     function gtag_report_conversion(url) {
@@ -27,9 +23,7 @@
         'send_to': 'AW-17048694370/7XQJCKihg8EaEOLcucE_',
         'transaction_id': '',
         'event_callback': function () {
-          if (url) {
-            window.location.href = url;
-          }
+          if (url) window.location.href = url;
         }
       });
       return false;
